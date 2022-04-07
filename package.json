@@ -1,11 +1,39 @@
 {
   "name": "@dwlib/base58",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Base58",
   "main": "lib/index.js",
+  "imports": {
+    "#intrinsics/*": "@dwlib/intrinsics/abstract/*",
+    "#primordials/*": "@dwlib/primordials/*",
+    "#types/*": "@dwlib/types/*",
+    "#abstract/*": "@dwlib/abstract/*",
+    "#internal/*": {
+      "require": "./lib/internal/*.js",
+      "import": "./lib/internal/*.mjs"
+    },
+    "#abstract-functions/*": {
+      "require": "./lib/abstract/*.js",
+      "import": "./lib/abstract/*.mjs"
+    }
+  },
   "exports": {
-    "require": "./lib/index.js",
-    "import": "./lib/index.mjs"
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./*": {
+      "require": "./lib/*.js",
+      "import": "./lib/*.mjs"
+    },
+    "./abstract": {
+      "require": "./lib/abstract/index.js",
+      "import": "./lib/abstract/index.mjs"
+    },
+    "./abstract/*": {
+      "require": "./lib/abstract/*.js",
+      "import": "./lib/abstract/*.mjs"
+    }
   },
   "files": [
     "lib"
@@ -27,8 +55,9 @@
   },
   "homepage": "https://github.com/dwlib-js/base58#readme",
   "dependencies": {
-    "@dwlib/abstract": "^1.0.2",
-    "@dwlib/primordials": "^1.0.1",
-    "@dwlib/utf8": "^1.0.3"
+    "@dwlib/abstract": "^1.0.8",
+    "@dwlib/intrinsics": "^1.0.4",
+    "@dwlib/primordials": "^1.0.4",
+    "@dwlib/types": "^1.0.1"
   }
 }
