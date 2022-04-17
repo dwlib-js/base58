@@ -1,6 +1,6 @@
 {
   "name": "@dwlib/base58",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Base58",
   "main": "lib/index.js",
   "imports": {
@@ -8,6 +8,7 @@
     "#primordials/*": "@dwlib/primordials/*",
     "#types/*": "@dwlib/types/*",
     "#abstract/*": "@dwlib/abstract/*",
+    "#utf8/*": "@dwlib/utf8/abstract/*",
     "#internal/*": {
       "require": "./lib/internal/*.js",
       "import": "./lib/internal/*.mjs"
@@ -58,6 +59,7 @@
     "@dwlib/abstract": "^1.0.8",
     "@dwlib/intrinsics": "^1.0.4",
     "@dwlib/primordials": "^1.0.4",
-    "@dwlib/types": "^1.0.1"
+    "@dwlib/types": "^1.0.1",
+    "@dwlib/utf8": "^1.0.5"
   }
 }
